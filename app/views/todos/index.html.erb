@@ -5,4 +5,6 @@
   <h2><%= todo.title %></h2>
   <h3><%= todo.body %></h3>
 <%= link_to 'Show Todo', todo_path(todo) %>
+<%= link_to 'Edit Todo', edit_todo_path(todo) %>
+<%= link_to 'Delete Todo', todo_path(todo), method: :delete %>
 <% end %>
