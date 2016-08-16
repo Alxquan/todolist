@@ -1,0 +1,8 @@
+<h1>Todo list</h1>
+<p><%= link_to 'New todo thingy', new_todo_path %></p>
+<% @todos.each do |todo|%>
+  <p><%= todo.complete %></p>
+  <h2><%= todo.title %></h2>
+  <h3><%= todo.body %></h3>
+<%= link_to 'Show Todo', todo_path(todo) %>
+<% end %>
