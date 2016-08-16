@@ -21,6 +21,20 @@ class TodosController < ApplicationController
     end
   end
 
+  def update
+    @todo = Todo.find(params[:id])
+
+    if @todo.update(todo_params)
+      redirect_to todo_path
+    else
+      render :edit
+    end
+  end
+
+  def edit
+    @todo = Todo.find(params[:id])
+  end
+
   private
 
   def todo_params
